@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import { BrowserRouter as Routes, Route, BrowserRouter} from 'react-router-dom'
 import Navbar from './Components/Navegacion/Navbar'
 import Inicio from './Components/Pages/Inicio'
 import Contacto from './Components/Pages/Contacto'
@@ -10,19 +10,17 @@ import SignUp from './Components/Pages/SignUp';
 
 const App = () => {
   return (
-    <div className="App">
-      <Router>
+    <BrowserRouter className="App">
         <Navbar />
         <Routes>
-          <Route path='/' exact components={Inicio}/>
-          <Route path='/Contacto' exact components={Contacto}/>
-          <Route path='/Productos' exact components={Productos}/>
-          <Route path='/AboutUs' exact components={AboutUs}/>
-          <Route path='/Login' exact components={Login}/>
-          <Route path='/SignUp' exact components={SignUp}/>
+          <Route path='/Inicio' element={<Inicio />} />
+          <Route path='/Contacto' element={<Contacto />} />
+          <Route path='/Productos' element={<Productos />} />
+          <Route path='/AboutUs' element={<AboutUs />} />
+          <Route path='/Login' element={<Login />} />
+          <Route path='/SignUp' element={<SignUp />} />
         </Routes>
-      </Router>
-    </div>
+    </BrowserRouter>
   );
 }
 
