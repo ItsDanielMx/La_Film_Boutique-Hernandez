@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Routes, Route, BrowserRouter} from 'react-router-dom'
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import Navbar from './Components/Navegacion/Navbar'
 import Inicio from './Components/Pages/Inicio'
 import Contacto from './Components/Pages/Contacto'
@@ -13,7 +13,7 @@ const App = () => {
     <BrowserRouter className="App">
         <Navbar />
         <Routes>
-          <Route path='/Inicio' element={<Inicio />} />
+          <Route path='/' element={<Inicio />} />
           <Route path='/Contacto' element={<Contacto />} />
           <Route path='/Productos' element={<Productos />} />
           <Route path='/AboutUs' element={<AboutUs />} />
