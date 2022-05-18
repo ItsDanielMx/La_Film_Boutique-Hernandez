@@ -78,6 +78,15 @@
   font-family: "headerFont";
   text-decoration: none;
 }
+.CartWidget {
+  background-color: rgba(255, 255, 255, 0);
+  color: rgb(255, 255, 255);
+  border: none;
+  font-size: 30px;
+  padding-right: 270px;
+  display: flex;
+  align-items: center;
+}
 
 /* Footer */
 #footer {
