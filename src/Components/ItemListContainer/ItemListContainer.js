@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import ItemCount from '../ItemCount'
 
 function ItemListContainer({greeting}) {
   return (
@@ -36,7 +36,7 @@ function ItemListContainer({greeting}) {
                         ARRI ALEXA LF or MINI LF
                         <br /> rental per day
                         $2,500.00 <br />
-                        <button type="submit" id="cart1" className="btn btn-primary mb-3">Add to cart</button>
+                        <ItemCount stock={5} initial={1}></ItemCount>
                     </p>
                 </div>
                 
@@ -92,7 +92,7 @@ function ItemListContainer({greeting}) {
                         PANASONIC VARICAM LT
                         <br />
                         rental per day $450.00 <br />
-                        <button type="submit" id="cart2" className="btn btn-primary mb-3">Add to cart</button>
+                        <ItemCount stock={8} initial={1}></ItemCount>
                     </p>
                 </div>
             
@@ -185,7 +185,7 @@ function ItemListContainer({greeting}) {
                         ARRI ALEXA MINI CAMERA 4:3 ARRIRAW
                         <br /> rental per day
                         $875.00 <br />
-                        <button type="submit" id="cart3" className="btn btn-primary mb-3">Add to cart</button>
+                        <ItemCount stock={2} initial={1}></ItemCount>
                     </p>
                 </div>
                 
