@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ItemCount from '../ItemCount'
+import CustomFetch from '../Utils/CustomFetch';
+import ItemList from './ItemList'
+const { products } = require('../Utils/Products');
 
-function ItemListContainer({greeting}) {
+const ItemListContainer = ({greeting}) => {
+    const [datos, setDatos] = useState([]);
+
+    useEffect(() => {
+        CustomFetch(2000,products)
+            .then(result => setDatos(result))
+            .catch(err => console.log(err))
+    })
   return (
             <section className="camaras container">
             <h1 className="mt-4 tituloProductos">{greeting}</h1>
@@ -28,62 +38,8 @@ function ItemListContainer({greeting}) {
                 <hr className="container" />
             </div> */}
 
-            <div id="camera1">
-                <div className="camarasTop">
-                    <img src="./ALEXA-Mini-LF-SP-47-MVF-2-left-front-white.jpg" width="50%" height="auto"
-                        alt="Arri Alexa LF Camera" />
-                    <p className="comprar">
-                        ARRI ALEXA LF or MINI LF
-                        <br /> rental per day
-                        $2,500.00 <br />
-                        <ItemCount stock={5} initial={1}></ItemCount>
-                    </p>
-                </div>
-                
-                <details>
-                    <summary className="d-flex">
-                        <h4 className="detallesC">Details</h4>
-                    </summary>
-                    ARRI ALEXA LF Beast camera package <br />
-                    Kit includes a very complete package : <br />
-                    1 ARRI ALEXA LF LARGE FORMAT CAMERA BODY <br />
-                    1 ARRI EVF- <br />
-                    1 ELECTRONIC VIEWFINDER <br />
-                    1 ARRI VMB- <br />
-                    3 VIEWFINDER MOUNTING BRACKET <br />
-                    2 ARRI VIEWFINDER CABLE - 12IN <br />
-                    1 ARRI TOP CAMERA <br />
-                    CENTER HANDLE CCH-4 <br />
-                    1 ARRI LPL MOUNT FOR ALEXA <br />
-                    1 ARRI PL TO PL MOUNT ADAPTER <br />
-                    1 ARRI SXR ADAPTER 4 ARRI <br />
-                    2TB CODEX DRIVES AND CODEX DOCK TRANSFER (needed otherwise you can't download from CODEX drives) <br />
-                    1 SANDISK 16GB SD CARD <br />
-                    1 MINI THUMB DRIVE <br />
-                    2 24V 3-PIN XLR TO 2-PIN FISCHER CABLE - 10FT <br />
-                    1 ARRI 4-PIN XLR TO 2-PIN LEMO 12V CABLE - 3FT <br />
-                    1 ARRI SP-4 SHOULDER PAD <br />
-                    2 15MM ROD - 8IN <br />
-                    2 15MM ROD - 18IN <br />
-                    2 5 PIN XLR TO <br />
-                    3 PIN XLR PIGTAIL <br />
-                    2 TIMECODE SYSTEMS 10-PIN LEMO TO RJ45 ETHERNET CONNECTOR CABLE <br />
-                    1 HAWK WOODS 24V/220W CHARGER <br />
-                    4 HAWK WOODS 200 W batteries <br />
-                    2 VCLX Cine block battteries + charger <br />
-                    1 ARRI LB-1 LEVELING BLOCK <br />
-                    1 ARRI VEB-3 VIEWFINDER EXTENSION BR /ACKET <br />
-                    1 ARRI KC-151-S VIEWFINDER CABLE- 24IN 1 ARRI HEB-2 HANDLE EXTENSION BLOCK <br />
-                    1 ARRI WA-1 WEDGE ADAPTER <br />
-                    1 ARRI BP-13 15MM SLIDING BASEPLATE <br />
-                    1 ARRI BPA-2 BRIDGE PLATE ADAPTER <br />
-                    1 ARRI BP9/BP8 brigdeplate 1 12IN DOVETAIL FOR SLIDING BASEPLATE 1 ARRI PREMIUM INTEGRATED WIRELESS
-                    VIDEO KIT <br />
-                    1 ARRI ALEXA LF INNERSPACE CASE ALL CAMERA ACCESORIES also AVAILABLE upon request,
-                    contact us for a quote. <br />
-                </details>
-                <hr />
-            </div>
+            <ItemList items={datos} />
+
             <div id="camera2">
                 <div className="camarasTop">
                     <img src="./Panasonic-Varicam.jpg" width="50%" height="auto"
