@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Footer from '../Footer/Footer'
 
 const Inicio = () => {
   return (
@@ -69,7 +68,6 @@ const Inicio = () => {
         </div>
         <hr />
         </section>
-        <Footer />
       </div>
   )
 }

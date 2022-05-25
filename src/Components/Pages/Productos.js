@@ -1,7 +1,6 @@
 import React from 'react'
 // import { Link } from 'react-router-dom'
 // import swal from 'sweetalert'
-import Footer from '../Footer/Footer'
 import ItemListContainer from '../ItemListContainer/ItemListContainer'
 
 
@@ -9,7 +8,6 @@ const Productos = () => {
   return (
     <div>
         <ItemListContainer greeting='We have everything in lenses and cameras for big projects'/>
-        <Footer />
     </div>
   )
 }

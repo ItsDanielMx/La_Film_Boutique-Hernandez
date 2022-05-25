@@ -1,14 +1,15 @@
 import React from 'react'
 import ItemCount from '../ItemCount'
 
-const Item = ({ id, title, stock, price, image }) => {
+const Item = ({ product }) => {
+    const {id, name, stock, price, image } = product
     return (
-        <div id='camera{id}'>
+        <div id='camera1'>
             <div className="camarasTop">
                 <img src={image} width="50%" height="auto"
-                    alt={title} />
+                    alt={name} />
                 <p className="comprar">
-                    {title}
+                    {name}
                     <br /> rental per day
                     ${price} <br />
                     <ItemCount stock={stock} initial={1}></ItemCount>
