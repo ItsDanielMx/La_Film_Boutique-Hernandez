@@ -3,7 +3,7 @@ const products = [
         id:1,
         name:'ARRI ALEXA LF or MINI LF',
         price:2500.00,
-        description:'lalalalaalalalala',
+        description:'Una camara muy bonita que graba en 4K 60fps',
         image: ['https://res.cloudinary.com/itsdanielmx/image/upload/v1653433855/img/ALEXA-Mini-LF-SP-47-MVF-2-left-front-white_a6zfrt.jpg'],
         stock:5,
     },

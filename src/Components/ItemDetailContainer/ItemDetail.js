@@ -9,6 +9,7 @@ const ItemDetail = ({ item }) => {
                 <img src={item.image[0]} width="50%" height="auto"
                     alt={item.name} />
                 <p className="comprar">
+                    {item.description}
                     {item.name}
                     <br /> rental per day
                     ${item.price} <br />
