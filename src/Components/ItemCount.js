@@ -1,7 +1,8 @@
 import { Add, Remove } from '@mui/icons-material';
-import { Button } from '@mui/material';
+import { Button} from '@mui/material';
 import React from 'react'
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'
 import swal from 'sweetalert';
 
 const ItemCount = ({ stock = 0, initial = 1,  onAdd }) => {
@@ -37,6 +38,7 @@ return (
         <Button variant="text" onClick={increment}><Add /></Button>
         <br />
         <button type="submit" id="cart3" onClick={carritoAgregado} className="btn btn-primary mb-3">Add to cart</button>
+        
     </div>
 )
 }

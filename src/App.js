@@ -11,6 +11,7 @@ import Productos from './Components/Pages/Productos'
 import AboutUs from './Components/Pages/AboutUs'
 import Login from './Components/Pages/Login';
 import SignUp from './Components/Pages/SignUp';
+import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           <Route path='/AboutUs' element={<AboutUs />} />
           <Route path='/Login' element={<Login />} />
           <Route path='/SignUp' element={<SignUp />} />
+          <Route path='/ItemDetailContainer' element={<ItemDetailContainer />} />
         </Routes>
         <Footer />
     </BrowserRouter>

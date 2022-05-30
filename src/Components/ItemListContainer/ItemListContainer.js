@@ -1,35 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import ItemList from './ItemList'
+import products from './Products'
 
 const ItemListContainer = ({greeting}) => {
     const [datos, setDatos] = useState([])
     const [loading, setLoading] = useState(false)
-    const products = [
-        {
-            id:1,
-            name:'ARRI ALEXA LF or MINI LF',
-            price:2500.00,
-            description:'lalalalaalalalala',
-            image: ['https://res.cloudinary.com/itsdanielmx/image/upload/v1653433855/img/ALEXA-Mini-LF-SP-47-MVF-2-left-front-white_a6zfrt.jpg'],
-            stock:5,
-        },
-        {
-            id:2,
-            name:'PANASONIC VARICAM LT',
-            price:450.00,
-            description:'lalalalaalalalala',
-            image: ['https://res.cloudinary.com/itsdanielmx/image/upload/v1653433873/img/Panasonic-Varicam_qhixdc.jpg'],
-            stock:3,
-        },
-        {
-            id:3,
-            name:'ARRI ALEXA MINI CAMERA 4:3 ARRIRAW',
-            price:875.00,
-            description:'lalalalaalalalala',
-            image: ['https://res.cloudinary.com/itsdanielmx/image/upload/v1653433863/img/Arri-Alexa-Mini-PL-1_y1dzww.jpg'],
-            stock:14,
-        }
-    ]
 
     const getData = new Promise((resolve, reject) => {
         let condition = true
@@ -39,7 +14,7 @@ const ItemListContainer = ({greeting}) => {
             } else {
                 reject('algo salio mal')
             }
-        },3000)
+        },1000)
     })
 
     useEffect(()=>{
@@ -75,7 +50,7 @@ const ItemListContainer = ({greeting}) => {
                 <hr className="container" />
             </div> */}
 
-            {loading ? <p>Cargando</p> : <ItemList items={datos}/>}
+            {loading ? <p>Cargando...</p> : <ItemList items={datos}/>}
 
         </section>
     )
