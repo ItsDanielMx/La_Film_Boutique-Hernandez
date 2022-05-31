@@ -1,8 +1,9 @@
 import React from 'react'
+import FormularioLogin from '../Login/FormularioLogin'
 
 function Login() {
   return (
-    <div>Login</div>
+    <FormularioLogin />
   )
 }
 

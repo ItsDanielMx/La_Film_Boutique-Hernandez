@@ -5,7 +5,7 @@ import ItemCount from '../ItemCount'
 const Item = ({ product }) => {
     const {id, name, stock, price, image } = product
     return (
-        <div id='camera1'>
+        <div id={`camera${id}`}>
             <div className="camarasTop">
                 <img src={image} width="50%" height="auto"
                     alt={name} />
@@ -14,7 +14,7 @@ const Item = ({ product }) => {
                     <br /> rental per day
                     ${price} <br />
                     <ItemCount stock={stock} initial={1}></ItemCount>
-                    <Link to="/ItemDetailContainer"><button type="submit" id="cart3" className="btn btn-secondary mb-3">Details</button></Link>
+                    <Link to={`/detail/${id}`}><button type="submit" id="cart3" className="btn btn-secondary mb-3">Details</button></Link>
                 </p>
             </div>
             <hr />

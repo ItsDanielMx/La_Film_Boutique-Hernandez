@@ -1,11 +1,17 @@
 import React from 'react'
+import Frase from '../AboutUs/Frase'
+import History from '../AboutUs/History'
+import WhyWork from '../AboutUs/WhyWork'
 
 function AboutUs() {
   return (
-    <div>
-        <h1>About Us</h1>
-        <h2>HOLA</h2>
-    </div>
+    <main className="nosotrosFondo">
+      <Frase />
+      <hr className="container barritas" />
+      <WhyWork />
+      <hr className="container barritas" />
+      <History />
+    </main>
   )
 }
 

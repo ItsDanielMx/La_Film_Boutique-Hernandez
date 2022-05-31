@@ -1,10 +1,13 @@
 import React from 'react'
+import Formulario from '../Contacto/Formulario'
+import TelefonoMapa from '../Contacto/TelefonoMapa'
 
 const contacto = () => {
   return (
-    <div>
-        <h1>CONTACT</h1>
-    </div>
+    <main>
+        <Formulario />
+        <TelefonoMapa />
+    </main>
   )
 }
 

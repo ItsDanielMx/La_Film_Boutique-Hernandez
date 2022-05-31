@@ -11,7 +11,7 @@ const Inicio = () => {
             <section>
                 <iframe className="videoC" width="90%" height="600px" src="https://www.youtube.com/embed/EK1HwowDe9U?start=3"
                   title="YouTube video player" frameBorder="0"
-                  allow="accelerometer; autoPlay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen></iframe>
             </section> <br />
             <hr />
@@ -29,7 +29,7 @@ const Inicio = () => {
             <div className="carousel-inner">
                 <div className="carousel-item active" data-bs-interval="2000">
                     <Link className="d-flex justify-content-center" to='/productos'>
-                        <img src="./Arri-Alexa-Mini-PL-1.jpg" width="49.5%"
+                        <img src="./Arri-Alexa-Mini-PL-1.jpg" width="78.85%"
                             alt="Arri alexa Mini" /></Link>
                     <div className="carousel-caption d-none d-md-block">
                         <h5>ARRI ALEXA MINI CAMERA 4:3 ARRIRAW</h5>

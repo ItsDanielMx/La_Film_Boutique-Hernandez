@@ -214,6 +214,137 @@
   text-decoration: underline;
 }
 
+/* Contacto */
+main .talk {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+main .contacto {
+  padding: 3em;
+  display: flex;
+  justify-content: center;
+}
+main .contactoDatos {
+  display: flex;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 50%;
+  grid-template-rows: 90px 500px;
+  gap: 3em;
+}
+main .contactoDatos .mapa {
+  display: flex;
+  justify-content: center;
+}
+main .contactoDatos .mapa .mapa2 {
+  transition: all 1.5s;
+}
+main .contactoDatos .mapa .mapa2:hover {
+  transform: scale(1.1);
+  box-shadow: 28px 24px 27px 0px rgba(0, 0, 0, 0.52);
+  -webkit-box-shadow: 28px 24px 27px 0px rgba(0, 0, 0, 0.52);
+  -moz-box-shadow: 28px 24px 27px 0px rgba(0, 0, 0, 0.52);
+}
+main .contactoDatos .telefonos {
+  font-family: "Noto Sans Mono", monospace;
+  font-size: 1em;
+  text-align: center;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  transition: all 1.5s;
+}
+main .contactoDatos .telefonos:hover {
+  transform: scale(1.5);
+  background-color: white;
+}
+
+/* AboutUs */
+
+.barritas {
+  color: white;
+}
+.nosotrosFondo {
+  background-color: black;
+  padding: 3em;
+  background-image: url("../public/Camara-fondo.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+@media screen and (max-width: 480px) {
+  .nosotrosFondo {
+    background-image: url("../public/Camara-fondo.jpg");
+    background-size: 480px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
+.nosotrosFondo section .frase {
+  font-size: 3em;
+  color: whitesmoke;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.nosotrosFondo section .fraseAutor {
+  font-size: 1em;
+  color: whitesmoke;
+}
+.nosotrosFondo section .nosotrosT {
+  padding: 1em;
+  font-family: "maquina";
+  font-size: 2em;
+  color: whitesmoke;
+  text-align: center;
+  text-decoration: underline;
+}
+.nosotrosFondo section .nosotrosP {
+  font-family: "maquina";
+  color: whitesmoke;
+  text-align: justify;
+}
+
+/* Login y Sign Up */
+
+.user {
+  display: flex;
+  justify-content: center;
+}
+
+#bienvenido {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+.iniciarS {
+  padding: 2em;
+}
+.iniciarS .formulario {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.iniciarS .formulario h1 {
+  font-size: 1em;
+}
+.iniciarS .formulario .signUp a {
+  color: black;
+}
+
+.createA {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.register {
+  padding-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.register .sexo {
+  display: flex;
+  justify-content: space-around;
+}
+
 /* Carrito */
 
 .productoEnCarrito {

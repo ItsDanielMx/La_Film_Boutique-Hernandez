@@ -4,20 +4,23 @@ import ItemCount from '../ItemCount';
 
 const ItemDetail = ({ item }) => {
   return (
-    <div id='camera1'>
+    <section className="camaras container">
+    <div id={`camera${item.id}`}>
+            <hr/>
             <div className="camarasTop">
-                <img src={item.image[0]} width="50%" height="auto"
-                    alt={item.name} />
+                 <img src={item.image} width="50%" height="auto"
+                    alt={item.name} /> 
                 <p className="comprar">
+                    {item.name} <br />
                     {item.description}
-                    {item.name}
                     <br /> rental per day
                     ${item.price} <br />
                     <ItemCount stock={item.stock} initial={1}></ItemCount>
                 </p>
             </div>
             <hr />
-        </div>
+    </div>
+    </section>
   )
 }
 

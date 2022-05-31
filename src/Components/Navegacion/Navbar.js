@@ -10,7 +10,7 @@ const navbar = () =>  {
             <nav className="navbar navbar-expand-lg navbar-dark">
                 <div className="container-fluid">
                     <Link className=" titulo navbar-brand" to='/'>
-                        <img src='./siemens-star.png' alt="LAFILMBOUTIQUE" width="40" height="40"
+                        <img src='../siemens-star.png' alt="LAFILMBOUTIQUE" width="40" height="40"
                             className="d-inline-block align-text-top me-2"></img>
                         LA Film Boutique
                     </Link>

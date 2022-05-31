@@ -1,7 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-// import $ from 'jquery'
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import Navbar from './Components/Navegacion/Navbar'
 import Footer from './Components/Footer/Footer';
@@ -24,7 +23,7 @@ const App = () => {
           <Route path='/AboutUs' element={<AboutUs />} />
           <Route path='/Login' element={<Login />} />
           <Route path='/SignUp' element={<SignUp />} />
-          <Route path='/ItemDetailContainer' element={<ItemDetailContainer />} />
+          <Route path='/detail/:idItem' element={<ItemDetailContainer />} />
         </Routes>
         <Footer />
     </BrowserRouter>

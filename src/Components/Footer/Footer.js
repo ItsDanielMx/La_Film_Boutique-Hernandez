@@ -4,9 +4,9 @@ function Footer() {
   return (
     <footer id="footer">
     <div className="redes">
-        <a to="https://www.facebook.com/Lafilmboutique" target='_blank' rel="noopener noreferrer"> <i className="fab fa-facebook-f"></i> </a>
-        <a to="https://www.instagram.com/lafilmboutique/" target='_blank' rel="noopener noreferrer"> <i className="fab fa-instagram"></i> </a>
-        <a to="https://www.pinterest.com/lafilmboutique" target='_blank' rel="noopener noreferrer"> <i className="fab fa-pinterest"></i> </a>
+        <a src="https://www.facebook.com/Lafilmboutique" target='_blank' rel="noopener noreferrer"> <i className="fab fa-facebook-f"></i> </a>
+        <a src="https://www.instagram.com/lafilmboutique/" target='_blank' rel="noopener noreferrer"> <i className="fab fa-instagram"></i> </a>
+        <a src="https://www.pinterest.com/lafilmboutique" target='_blank' rel="noopener noreferrer"> <i className="fab fa-pinterest"></i> </a>
     </div>
     <div className="mb-3"> <br />
         <span className="d-flex justify-content-between">
