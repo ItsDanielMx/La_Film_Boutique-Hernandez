@@ -26,7 +26,7 @@ const ItemListContainer = ({greeting}) => {
             if(!categoryList){
                 setDatos(res)
             }else{
-                setDatos(res.filter((prod)=> products.category === categoryList))
+                setDatos(res.filter((prod)=> prod.category === categoryList))
             }
         })
         .catch((error)=> console.log(error))

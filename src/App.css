@@ -202,7 +202,7 @@
 .camaras #camera2 .detallesC {
   text-decoration: underline;
 }
-.camaras #camera3 {
+.camaras {
   padding: 2em;
 }
 @media only screen and (max-width: 480px) {

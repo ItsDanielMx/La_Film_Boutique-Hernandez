@@ -11,7 +11,7 @@ const Item = ({ product }) => {
                     alt={name} />
                 <p className="comprar">
                     {name}
-                    <br /> rental per day
+                    <br /> rental per day:
                     ${price} <br />
                     <ItemCount stock={stock} initial={1}></ItemCount>
                     <Link to={`/detail/${id}`}><button type="submit" id="cart3" className="btn btn-secondary mb-3">Details</button></Link>
