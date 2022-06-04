@@ -161,13 +161,13 @@
 }
 
 /* Productos */
-.camaras #camera3 .camarasTop, .camaras #camera2 .camarasTop, .camaras #camera1 .camarasTop {
+.camarasTop {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.camaras #camera3 .camarasTop .comprar, .camaras #camera2 .camarasTop .comprar, .camaras #camera1 .camarasTop .comprar {
+.comprar {
   text-align: right;
   font-size: 2em;
 }
@@ -184,7 +184,7 @@
   padding: 2em;
 }
 @media only screen and (max-width: 480px) {
-  .camaras #camera1 .camarasTop .comprar {
+  .comprar {
     font-size: 1em;
   }
 }
