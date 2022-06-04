@@ -8,7 +8,7 @@ function ItemDetailContainer() {
     const [dato, setDato] = useState([])
     const { idItem } = useParams();
     useEffect(() => {
-        CustomFetch(2000, products)
+        CustomFetch(1000, products)
             .then(result => setDato(result.find(item => item.id === parseInt(idItem))))
             .catch(err => console.log(err))
     }, []);

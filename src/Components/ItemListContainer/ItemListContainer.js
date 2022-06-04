@@ -36,8 +36,8 @@ const ItemListContainer = ({greeting}) => {
             <section className="camaras container">
             <h1 className="mt-4 tituloProductos">{greeting}</h1>
             <hr className="container"></hr>
-            {loading ? <div class="loading show">
-            <div class="spin"></div>
+            {loading ? <div className="loading show">
+            <div className="spin"></div>
             </div> : <ItemList items={datos}/>}
 
         </section>

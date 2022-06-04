@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import ItemCount from '../ItemCount'
+import ItemCount from '../ItemCount/ItemCount'
 
 const Item = ({ product }) => {
     const {id, name, stock, price, image } = product
@@ -13,8 +13,7 @@ const Item = ({ product }) => {
                     {name}
                     <br /> rental per day:
                     ${price} <br />
-                    <ItemCount stock={stock} initial={1}></ItemCount>
-                    <Link to={`/detail/${id}`}><button type="submit" id="cart3" className="btn btn-secondary mb-3">Details</button></Link>
+                    <Link to={`/detail/${id}`}><button type="submit" id="cart3" className="btn btn-primary mb-3">Details</button></Link>
                 </p>
             </div>
             <hr />
