@@ -32,8 +32,8 @@ const navbar = () =>  {
                                     Products
                                 </Link>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><Link className="dropdown-item" to="/Productos/categoria/:categoryList">Cameras</Link></li>
-                                    <li><Link className="dropdown-item" to="/Productos/categoria/:categoryList">Lenses</Link></li>
+                                    <li><Link className="dropdown-item" to="/categoria/camera">Cameras</Link></li>
+                                    <li><Link className="dropdown-item" to="/categoria/lense">Lenses</Link></li>
                                     <li>
                                         <hr className="dropdown-divider" />
                                     </li>

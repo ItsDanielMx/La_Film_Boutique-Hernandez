@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import ItemList from './ItemList'
 import products from '../Utils/Products'
-import { categoryList } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 const ItemListContainer = ({greeting}) => {
     const [datos, setDatos] = useState([])
     const [loading, setLoading] = useState(false)
+    const {categoryList}=useParams()
 
     const getData = new Promise((resolve, reject) => {
         let condition = true
@@ -35,7 +36,9 @@ const ItemListContainer = ({greeting}) => {
             <section className="camaras container">
             <h1 className="mt-4 tituloProductos">{greeting}</h1>
             <hr className="container"></hr>
-            {loading ? <p>Cargando...</p> : <ItemList items={datos}/>}
+            {loading ? <div class="loading show">
+            <div class="spin"></div>
+            </div> : <ItemList items={datos}/>}
 
         </section>
     )

@@ -14,7 +14,7 @@ import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailCont
 
 const App = () => {
   return (
-    <BrowserRouter className="App">
+    <BrowserRouter>
         <Navbar />
         <Routes>
           <Route path='/' element={<Inicio />} />

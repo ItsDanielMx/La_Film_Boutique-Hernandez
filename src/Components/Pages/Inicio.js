@@ -29,7 +29,7 @@ const Inicio = () => {
             <div className="carousel-inner">
                 <div className="carousel-item active" data-bs-interval="2000">
                     <Link className="d-flex justify-content-center" to='/productos'>
-                        <img src="./Arri-Alexa-Mini-PL-1.jpg" width="78.85%"
+                        <img src="https://res.cloudinary.com/itsdanielmx/image/upload/v1653433863/img/Arri-Alexa-Mini-PL-1_y1dzww.jpg" width="78.85%"
                             alt="Arri alexa Mini" /></Link>
                     <div className="carousel-caption d-none d-md-block">
                         <h5>ARRI ALEXA MINI CAMERA 4:3 ARRIRAW</h5>
@@ -38,7 +38,7 @@ const Inicio = () => {
                 </div>
                 <div className="carousel-item" data-bs-interval="2000">
                     <Link className="d-flex justify-content-center" to='/productos'>
-                        <img src="./ALEXA-Mini-LF-SP-47-MVF-2-left-front-white.jpg" width="65.5%"
+                        <img src="https://res.cloudinary.com/itsdanielmx/image/upload/v1653433855/img/ALEXA-Mini-LF-SP-47-MVF-2-left-front-white_a6zfrt.jpg" width="65.5%"
                             alt="ARRI ALEXA LF or MINI LF" /></Link>
                     <div className="carousel-caption d-none d-md-block">
                         <h5>ARRI ALEXA LF or MINI LF</h5>
@@ -47,7 +47,7 @@ const Inicio = () => {
                 </div>
                 <div className="carousel-item" data-bs-interval="2000">
                     <Link className="d-flex justify-content-center" to='/productos'>
-                        <img src="./Panasonic-Varicam.jpg" width="39%" className="ma"
+                        <img src="https://res.cloudinary.com/itsdanielmx/image/upload/v1653433873/img/Panasonic-Varicam_qhixdc.jpg" width="39%" className="ma"
                             alt="Panasonic-Varicam" /></Link>
                     <div className="carousel-caption d-none d-md-block">
                         <h5>PANASONIC VARICAM LT</h5>
