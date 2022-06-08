@@ -19,7 +19,7 @@ function TelefonoMapa() {
                 width="400"
                 height="450"
                 style={{ border: "0" }}
-                allowfullscreen=""
+                allowFullScreen=""
                 loading="lazy"
                 ></iframe>
             </div> 
