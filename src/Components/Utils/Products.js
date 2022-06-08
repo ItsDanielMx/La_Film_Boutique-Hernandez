@@ -7,6 +7,7 @@ const products = [
         image: 'https://res.cloudinary.com/itsdanielmx/image/upload/v1653433855/img/ALEXA-Mini-LF-SP-47-MVF-2-left-front-white_a6zfrt.jpg',
         stock:5,
         category:'camera',
+        quantity:1,
     },
     {
         id:2,
@@ -16,6 +17,7 @@ const products = [
         image: 'https://res.cloudinary.com/itsdanielmx/image/upload/v1653433873/img/Panasonic-Varicam_qhixdc.jpg',
         stock:3,
         category:'camera',
+        quantity:1,
     },
     {
         id:3,
@@ -25,6 +27,7 @@ const products = [
         image: 'https://res.cloudinary.com/itsdanielmx/image/upload/v1653433863/img/Arri-Alexa-Mini-PL-1_y1dzww.jpg',
         stock:14,
         category:'camera',
+        quantity:1,
     },
     {
         id:4,
@@ -34,6 +37,7 @@ const products = [
         image: 'https://res.cloudinary.com/itsdanielmx/image/upload/v1654299828/img/Cooke40mm_gjc7qf.jpg',
         stock:57,
         category:'lense',
+        quantity:1,
     },
     {
         id:5,
@@ -43,6 +47,7 @@ const products = [
         image: 'https://res.cloudinary.com/itsdanielmx/image/upload/v1654304149/img/Cooke50mm_z3vwt1.jpg',
         stock:36,
         category:'lense',
+        quantity:1,
     },
     {
         id:6,
@@ -52,6 +57,7 @@ const products = [
         image: 'https://res.cloudinary.com/itsdanielmx/image/upload/v1654299812/img/Cooke100mm_mbkfwh.jpg',
         stock:23,
         category:'lense',
+        quantity:1,
     }
 ]
 export default products
