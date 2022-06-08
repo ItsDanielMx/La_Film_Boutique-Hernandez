@@ -19,7 +19,7 @@ const CartContextProvider = ({ children }) => {
     }
 
     const removeItem = (id) => {
-        let result = cartList.filter(item => item.idItem !== id);
+        let result = cartList.filter(item => item.id !== id);
         setCartList(result);
     }
 
