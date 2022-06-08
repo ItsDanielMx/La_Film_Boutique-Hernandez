@@ -30,7 +30,7 @@ function Cart() {
                         {item.description}
                         <br /> rental per day:
                         ${item.price} <br />
-                        Quantity: {item.quantity}
+                        Quantity: {item.quantity} <br />
                         <button type="submit" id={`deleteButton${item.id}`} className="btn btn-danger" onClick={() => test.removeItem(item.id)}>Delete</button>              
                         </p>
                     </div>
