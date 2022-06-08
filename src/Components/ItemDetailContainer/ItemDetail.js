@@ -1,14 +1,17 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { CartContext } from '../CartContext/CartContext';
 import ItemCount from '../ItemCount/ItemCount'
 
 
 const ItemDetail = ({ item }) => {
   const [count, setCount] = useState(0);
   const [compra, setCompra] = useState(false);
+  const test = useContext(CartContext);
   const navigate = useNavigate()
   const onAdd = () => {
       setCompra(true)
+      test.addToCart(item)
   }
   return (
     <section className="camaras container">
@@ -22,7 +25,7 @@ const ItemDetail = ({ item }) => {
           {item.description}
           <br /> rental per day:
           ${item.price} <br />
-          {compra ? <div><button type="submit" id="cart3" className="btn btn-dark mt-3 mb-3" onClick={()=>{navigate('/carrito')}}>Check Out</button> <br /> 
+          {compra ? <div><button type="submit" id="cart3" className="btn btn-dark mt-3 mb-3" onClick={()=>{navigate('/Cart')}}>Check Out</button> <br /> 
           <button type="submit" id="cart3" className="btn btn-secondary mb-3" onClick={()=>{navigate('/Productos')}}>Continue Shopping</button> </div> :
           <ItemCount stock={item.stock} initial={1} count={count} setCount={setCount} onAdd={onAdd}></ItemCount>}                    
         </p>

@@ -347,6 +347,11 @@ main .contactoDatos .telefonos:hover {
 
 /* Carrito */
 
+.botonesCarrito{
+  display: flex;
+  justify-content: space-between;
+}
+
 .productoEnCarrito {
   border-left: 5px solid black;
   border-bottom-left-radius: 3px;

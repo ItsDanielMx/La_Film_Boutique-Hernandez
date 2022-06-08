@@ -1,9 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import ItemCount from '../ItemCount/ItemCount'
 
 const Item = ({ product }) => {
-    const {id, name, stock, price, image } = product
+    const {id, name, price, image } = product
     return (
         <div id={`camera${id}`}>
             <div className="camarasTop">
