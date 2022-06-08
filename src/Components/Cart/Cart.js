@@ -5,10 +5,6 @@ import { CartContext } from '../CartContext/CartContext'
 
 function Cart() {
     const test = useContext(CartContext)
-    const {clear} = useContext(CartContext)
-    const deleteAll = () => {
-        clear();
-    }
 
   return (
     <section className="camaras container">
@@ -31,7 +27,7 @@ function Cart() {
                         <br /> rental per day:
                         ${item.price} <br />
                         {/* Quantity: ? */}
-                        <button type="submit" id={`deleteButton${item.id}`} className="btn btn-danger" >Delete</button>              
+                        <button type="submit" id={`deleteButton${item.id}`} className="btn btn-danger" onClick={() => test.removeItem(item.idItem)}>Delete</button>              
                         </p>
                     </div>
                     <hr />
@@ -41,7 +37,7 @@ function Cart() {
         }
         <div className='container botonesCarrito'>
         <Link to='/Productos'><button type="submit" id="cart3" className="btn btn-secondary mb-3">Continue shopping</button></Link>
-        <button type="submit" id="cart3" className="btn btn-danger mb-3" onClick={deleteAll}>Delete all</button>
+        <button type="submit" id="cart3" className="btn btn-danger mb-3" onClick={test.clear}>Delete all</button>
         <button type="submit" id="cart3" className="btn btn-primary mb-3">Confirm purchase</button>
         </div>
         <hr />

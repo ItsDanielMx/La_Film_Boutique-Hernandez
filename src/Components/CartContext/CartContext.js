@@ -4,29 +4,30 @@ export const CartContext = createContext();
 
 const CartContextProvider = ({ children }) => {
     const [cartList, setCartList] = useState([]);
+    const getProdId = (id) => cartList.find(e => e.id === id) || null
 
     const addToCart = (item, quantity) => {
-        const found = cartList.find(el => el.id === el.id)
-        const duplicated = (found, cartList) => {
-            cartList.forEach(element => {
-                if (found.id === element.id) {
-                    return element.cantidad = quantity + element.cantidad
-                }
-            });
+        const found = getProdId(item.id)
+        if(!found) {
+            item.quantity = quantity
+            setCartList([...cartList, item])
+        } else {
+            if(found.quantity + quantity > found.stock)
+            return false
+            found.quantity += quantity
         }
-        if (found) {duplicated(found, cartList)} else {setCartList([...cartList, item])}
     }
 
     const removeItem = (id) => {
-        const result = cartList.filter(el => el.id !== parseInt(id))
-        setCartList(result)
+        let result = cartList.filter(item => item.idItem !== id);
+        setCartList(result);
     }
 
     const clear = () => {
         setCartList([])
     }
     return (
-        <CartContext.Provider value={{cartList, addToCart}}>
+        <CartContext.Provider value={{cartList, addToCart, removeItem, clear}}>
             { children }
         </CartContext.Provider>
     );
