@@ -82,10 +82,11 @@
   background-color: rgba(255, 255, 255, 0);
   color: rgb(255, 255, 255);
   border: none;
-  font-size: 30px;
-  padding-right: 270px;
+  padding-right: .5em;
+  padding-left: .5em;
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 
 /* Footer */
@@ -350,6 +351,21 @@ main .contactoDatos .telefonos:hover {
 .botonesCarrito{
   display: flex;
   justify-content: space-between;
+}
+
+.totalPrecio {
+  display: flex;
+  justify-content: end;
+}
+
+.listaTotal {
+  list-style: none;
+}
+
+.goShopping{
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
 }
 
 .productoEnCarrito {

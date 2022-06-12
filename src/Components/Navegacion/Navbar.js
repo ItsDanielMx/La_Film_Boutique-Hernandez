@@ -19,7 +19,6 @@ const navbar = () =>  {
                     </button>
                     <div className="collapse navbar-collapse menu" id="navbarNav">
                         <ul className="navbar-nav">
-                            <li className='CartWidget'><Link to='/Cart'><CartWidget /></Link></li>
                             <li className="nav-item">
                                 <Link className="nav-link" aria-current="page" to='/'>Home</Link>
                             </li>
@@ -57,6 +56,7 @@ const navbar = () =>  {
                                     <li><Link className="dropdown-item" to="/Login">Settings</Link></li>
                                 </ul>
                             </li>
+                            <li className='CartWidget'><Link to='/Cart' className='CartWidget'><CartWidget /></Link></li>
                         </ul>
                     </div>
                 </div>

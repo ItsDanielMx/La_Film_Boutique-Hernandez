@@ -26,8 +26,32 @@ const CartContextProvider = ({ children }) => {
     const clear = () => {
         setCartList([])
     }
+
+    const totalPorItem = (id) => {
+        let index = cartList.map(item => item.id).indexOf(id);
+        return cartList[index].price * cartList[index].quantity;
+    }
+
+    const subTotal = () => {
+        let totalPerItem = cartList.map(item => totalPorItem(item.id));
+        return totalPerItem.reduce((previousValue, currentValue) => previousValue + currentValue);
+    }
+
+    const iva = () => {
+        return subTotal() * 0.16 ;
+    }
+
+    const total = () => {
+        return iva() + subTotal() ;
+    }
+
+    const ItemsInCart = () => {
+        let quantitys = cartList.map(item => item.quantity);
+        return quantitys.reduce(((previousValue, currentValue) => previousValue + currentValue), 0);
+    }
+
     return (
-        <CartContext.Provider value={{cartList, addToCart, removeItem, clear}}>
+        <CartContext.Provider value={{cartList, addToCart, removeItem, clear, totalPorItem, subTotal, iva, total, ItemsInCart}}>
             { children }
         </CartContext.Provider>
     );

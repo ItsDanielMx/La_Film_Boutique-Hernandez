@@ -7,11 +7,12 @@ import ItemCount from '../ItemCount/ItemCount'
 const ItemDetail = ({ item }) => {
   const [count, setCount] = useState(0);
   const [compra, setCompra] = useState(false);
-  const test = useContext(CartContext);
+  // const test = useContext(CartContext);
+  const {addToCart} = useContext(CartContext)
   const navigate = useNavigate()
   const onAdd = () => {
       setCompra(true)
-      test.addToCart(item)
+      addToCart(item, count)
   }
   return (
     <section className="camaras container">
