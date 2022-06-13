@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react'
 import ItemListContainer from '../ItemListContainer/ItemListContainer'
 
 const Productos = () => {

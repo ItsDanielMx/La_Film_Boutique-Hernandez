@@ -1,7 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import CarruselCamaras from '../Inicio/CarruselCamaras'
-import CarruselLentes from '../Inicio/CarruselCamaras'
 
 const Inicio = () => {
   return (
