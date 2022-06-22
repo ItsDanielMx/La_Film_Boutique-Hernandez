@@ -3,12 +3,50 @@ import { Link } from 'react-router-dom';
 import swal from 'sweetalert';
 import { CartContext } from '../CartContext/CartContext'
 import CartEmpty from './CartEmpty';
+import { collection, doc, setDoc, serverTimestamp, updateDoc, increment } from "firebase/firestore";
+import db from '../Utils/Firebase';
 
 function Cart() {
     const {cartList, removeItem, clear, totalPorItem, total, iva, subTotal} = useContext(CartContext)
 
     const confirmPurchase = () => {
-        swal("Confirmed purchase", "Your order number is: 7436834568", "success");
+        
+
+            const itemsForDB = cartList.map(item => ({
+                id: item.idItem,
+                price: item.price,
+                title: item.name,
+                quantity: item.quantity
+            }))
+            let order = {
+
+                buyer: {
+                    email: "cristianoCR7@ronaldo.com",
+                    nameBuyer: "Cristiano Ronaldo",
+                    phone: " 5533493956"
+                },
+                date: serverTimestamp(),
+                total: total(),
+                items: itemsForDB
+            }
+            
+        const createOrder = async () => {
+            const newOrderRef = doc(collection(db, "Orders"))
+            await setDoc(newOrderRef, order)
+            return newOrderRef
+        }
+        createOrder()
+        .then(result => swal("Confirmed purchase", "Your order number is: " + result.id, "success"))
+        .catch(err => console.log(err))
+
+        cartList.forEach(async (item) => {
+            const itemRef = doc(db, "Products", item.idItem)
+            await updateDoc(itemRef, {
+                stock: increment(-item.quantity)
+            })
+        })
+
+        clear()
     }
     
   return (
