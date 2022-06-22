@@ -6,16 +6,14 @@ import { firestoreFetch } from '../Utils/FirestoreFetch';
 
 const ItemListContainer = ({greeting}) => {
     const [datos, setDatos] = useState([])
-    const { idCategory } = useParams();
+    const { category } = useParams();
 
-    //componentDidUpdate
     useEffect(() => {
-        firestoreFetch(idCategory)
+        firestoreFetch(category)
             .then(result => setDatos(result))
             .catch(err => console.log(err));
-    }, [idCategory]);
+    }, [category]);
 
-    //componentWillUnmount
     useEffect(() => {
         return (() => {
             setDatos([]);
