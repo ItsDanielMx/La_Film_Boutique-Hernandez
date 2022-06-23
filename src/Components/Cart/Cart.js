@@ -1,53 +1,15 @@
 import React, { useContext } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
 import { CartContext } from '../CartContext/CartContext'
 import CartEmpty from './CartEmpty';
-import { collection, doc, setDoc, serverTimestamp, updateDoc, increment } from "firebase/firestore";
-import db from '../Utils/Firebase';
+
 
 function Cart() {
     const {cartList, removeItem, clear, totalPorItem, total, iva, subTotal} = useContext(CartContext)
+    const navegar = useNavigate()
 
-    const confirmPurchase = () => {
-        
-
-            const itemsForDB = cartList.map(item => ({
-                id: item.idItem,
-                price: item.price,
-                title: item.name,
-                quantity: item.quantity
-            }))
-            let order = {
-
-                buyer: {
-                    email: "cristianoCR7@ronaldo.com",
-                    nameBuyer: "Cristiano Ronaldo",
-                    phone: " 5533493956"
-                },
-                date: serverTimestamp(),
-                total: total(),
-                items: itemsForDB
-            }
-            
-        const createOrder = async () => {
-            const newOrderRef = doc(collection(db, "Orders"))
-            await setDoc(newOrderRef, order)
-            return newOrderRef
-        }
-        createOrder()
-        .then(result => swal("Confirmed purchase", "Your order number is: " + result.id, "success"))
-        .catch(err => console.log(err))
-
-        cartList.forEach(async (item) => {
-            const itemRef = doc(db, "Products", item.idItem)
-            await updateDoc(itemRef, {
-                stock: increment(-item.quantity)
-            })
-        })
-
-        clear()
-    }
+   
     
   return (
     <section className="camaras container">
@@ -91,7 +53,7 @@ function Cart() {
                 <div className='container botonesCarrito'>
                     <Link to='/Productos'><button type="submit" id="cart3" className="btn btn-secondary mb-3">Continue shopping</button></Link>
                     <button type="submit" id="cart3" className="btn btn-danger mb-3" onClick={clear}>Delete all</button>
-                    <button type="submit" id="cart3" className="btn btn-primary mb-3" onClick={confirmPurchase}>Confirm purchase</button>
+                    <button type="submit" id="cart3" className="btn btn-primary mb-3" onClick={()=> navegar('/checkout')}>Confirm purchase</button>
                 </div>
             </>
             :   <CartEmpty />

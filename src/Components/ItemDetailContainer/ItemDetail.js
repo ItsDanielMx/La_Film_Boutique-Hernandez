@@ -17,6 +17,7 @@ const ItemDetail = ({ item }) => {
   return (
     <section className="camaras container">
     <div id={`camera${item.id}`}>
+      <h1 className='talk'>Details</h1>
       <hr/>
       <div className="camarasTop">
         <img src={item.image} width="50%" height="auto"

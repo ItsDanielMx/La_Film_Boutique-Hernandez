@@ -13,6 +13,7 @@ import SignUp from './Components/Pages/SignUp';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 import CartContextProvider from './Components/CartContext/CartContext';
 import Cart from './Components/Cart/Cart';
+import Checkout from './Components/Checkout/Checkout';
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
             <Route path='/SignUp' element={<SignUp />} />
             <Route path='/detail/:idItem' element={<ItemDetailContainer />} />
             <Route path='/Cart' element={<Cart />} />
+            <Route path='/checkout' element={<Checkout/>}/>
           </Routes>
           <Footer />
       </BrowserRouter>
