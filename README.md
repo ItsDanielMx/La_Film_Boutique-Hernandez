@@ -1,6 +1,15 @@
-# Getting Started with Create React App
+# Welcome to my React Proyect "LA Film Boutique"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About the proyect
+
+This project was carried out based on a company that rents film equipment called "LA Film Boutique", using React in an e-commerce
+
+## About me
+
+I am a student of the Fullstack Developer career at CoderHouse, enthusiastic about new technologies and video games. Born in Mexico City, Mexico. Learning to live in the adult world
+
+## Author
+@ItsDanielMx
 
 ## Available Scripts
 
